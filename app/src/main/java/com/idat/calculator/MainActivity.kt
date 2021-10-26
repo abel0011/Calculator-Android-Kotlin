@@ -8,11 +8,17 @@ import kotlinx.android.synthetic.main.activity_main.* // import components layou
 class MainActivity : AppCompatActivity() {
     private var numUno : Double = 0.0
     private var numDos : Double = 0.0
+    private var resultado : Double = 0.0
+
+    val signo:String = "."
 
     private var opc = true
-    private var operacion = false
-
-
+    private var sig = true
+    private var op = true
+    private val suma = "+"
+    private val resta = "-"
+    private val multi = "*"
+    private val divi = "/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +53,22 @@ class MainActivity : AppCompatActivity() {
         btnNueve.setOnClickListener{
             btnClick("9")
         }
+
+        btnBorrar.setOnClickListener{
+            btnClear()
+        }
+        btnPunto.setOnClickListener{
+            btnDecimal()
+        }
+        btnCero.setOnClickListener{
+            btnClick("0")
+        }
+        btnSuma.setOnClickListener{
+            operacion(suma)
+        }
+        btnIgual.setOnClickListener{
+            resultado(suma,numUno)
+        }
     }
 
     private fun btnClick(num:String){
@@ -54,12 +76,59 @@ class MainActivity : AppCompatActivity() {
             txtPrincipal.setText("")
         }
         opc = false
-        txtPrincipal.text = "${txtPrincipal.text}$num"
+        txtPrincipal.text = "${txtPrincipal.text}${num}"
     }
 
-    private fun btnSuma(){
+
+    private fun operacion(operacionSeleccionada:String): Double {
         numUno = txtPrincipal.text.toString().toDouble()
-        Toast.makeText(applicationContext,"Esto es una suma",Toast.LENGTH_SHORT).show()
+        when(operacionSeleccionada){
+            "+"->{
+                txtPrincipal.setText("")
+            }
+            "-"->{
+            }
+            "*"->{
+            }
+            "/"->{
+            }
+            ""->{
+                Toast.makeText(applicationContext,"Seleccionar operación ${numUno}",Toast.LENGTH_LONG).show()
+            }
+        }
+        return numUno
+    }
+    private fun resultado(op:String,num:Double) {
+        numDos = txtPrincipal.text.toString().toDouble()
+
+        when(op){
+            "+"->{
+                Toast.makeText(applicationContext,"suma ${num+ numDos}",Toast.LENGTH_LONG).show()
+            }
+            "-"->{
+            }
+            "*"->{
+            }
+            "/"->{
+            }
+            ""->{
+                Toast.makeText(applicationContext,"Seleccionar operación ${numUno}",Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
+    private fun btnClear(){
+        txtPrincipal.setText("0")
+        opc = true
+        sig = true
+        op = true
+    }
+
+    private fun btnDecimal(){
+        if(sig){
+            txtPrincipal.text  = "${txtPrincipal.text}${signo}"
+        }
+        sig = false
     }
 
 }

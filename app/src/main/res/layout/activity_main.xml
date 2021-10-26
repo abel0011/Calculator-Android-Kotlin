@@ -11,7 +11,7 @@
     android:orientation="vertical">
 
 
-    <EditText
+    <TextView
         android:id="@+id/txtPrincipal"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -41,113 +41,45 @@
             android:layout_width="30pt"
             android:layout_height="30pt"
             android:background="@android:color/holo_purple"
-            android:text="Borrar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.254"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="20sp"
+            android:text="C"
+            />
 
         <Button
-            android:id="@+id/btnDos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:id="@+id/btnPlus"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
             android:background="@android:color/holo_purple"
-            android:text="2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.334"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="20sp"
+            android:text="+/-"
+            />
+
+        <Button
+            android:id="@+id/btnPorcentaje"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:textSize="20dp"
+            android:text="%"
+            />
 
         <Button
             android:id="@+id/btnDividir"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="392dp"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
             android:background="@android:color/holo_purple"
-            android:text="/"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.93"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnCuatro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="384dp"
-            android:background="@android:color/holo_purple"
-            android:text="4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnUno"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
-            android:background="@android:color/holo_purple"
-            android:text="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnOcho"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="472dp"
-            android:background="@android:color/holo_purple"
-            android:text="8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.334"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnCero"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="536dp"
-            android:background="@android:color/holo_purple"
-            android:text="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.334"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnPunto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="536dp"
-            android:background="@android:color/holo_purple"
-            android:text="."
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.637"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnIgual"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="536dp"
-            android:background="@android:color/holo_purple"
-            android:text="="
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.95"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            android:textSize="20dp"
+            android:text="÷"
+            />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
         <Button
             android:id="@+id/btnSiete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="472dp"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
             android:background="@android:color/holo_purple"
             android:text="7"
             app:layout_constraintEnd_toEndOf="parent"
@@ -156,93 +88,132 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnTres"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:id="@+id/btnOcho"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
             android:background="@android:color/holo_purple"
-            android:text="3"
+            android:text="8"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.668"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnSuma"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="252dp"
-            android:background="@android:color/holo_purple"
-            android:text="+"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.927"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <Button
             android:id="@+id/btnNueve"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="472dp"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
             android:background="@android:color/holo_purple"
             android:text="9"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.668"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <Button
+            android:id="@+id/btnMultiplicar"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:text="x"
+            />
+    </TableRow>
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+        <Button
+            android:id="@+id/btnCuatro"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:text="4"
+            />
+        <Button
+            android:id="@+id/btnCinco"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:text="5"
+            />
+        <Button
+            android:id="@+id/btnSeis"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:text="6"
+            />
         <Button
             android:id="@+id/btnResta"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="324dp"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
             android:background="@android:color/holo_purple"
             android:text="-"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.927"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            />
+    </TableRow>
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
         <Button
-
-            android:id="@+id/btnMultiplicar"
-            android:layout_width="51dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="460dp"
+            android:id="@+id/btnUno"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
             android:background="@android:color/holo_purple"
-            android:text="*"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.927"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
+            android:text="1"
+            />
+        <Button
+            android:id="@+id/btnDos"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:text="2"
+            />
+        <Button
+            android:id="@+id/btnTres"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:text="3"
+            />
+        <Button
+            android:id="@+id/btnSuma"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:text="+"
+            />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/btnMasMenosDos"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:text="+/-"
+            />
+        <Button
+            android:id="@+id/btnCero"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:background="@android:color/holo_purple"
+            android:text="0"
             />
 
         <Button
-            android:id="@+id/btnCinco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="384dp"
+            android:id="@+id/btnPunto"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
             android:background="@android:color/holo_purple"
-            android:text="5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.334"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            android:text="."
+            />
         <Button
-            android:id="@+id/btnSeis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="384dp"
+            android:id="@+id/btnIgual"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
             android:background="@android:color/holo_purple"
-            android:text="6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.668"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
+            android:text="="
+            />
     </TableRow>
 </TableLayout>
 
