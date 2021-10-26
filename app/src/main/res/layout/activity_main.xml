@@ -69,7 +69,7 @@
             android:layout_height="30pt"
             android:background="@android:color/holo_purple"
             android:textSize="20dp"
-            android:text="÷"
+            android:text="c"
             />
     </TableRow>
     <TableRow
@@ -112,7 +112,7 @@
             android:layout_width="30pt"
             android:layout_height="30pt"
             android:background="@android:color/holo_purple"
-            android:text="x"
+            android:text="*"
             />
     </TableRow>
     <TableRow

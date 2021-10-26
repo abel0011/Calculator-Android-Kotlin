@@ -15,10 +15,7 @@ class MainActivity : AppCompatActivity() {
     private var opc = true
     private var sig = true
     private var op = true
-    private val suma = "+"
-    private val resta = "-"
-    private val multi = "*"
-    private val divi = "/"
+    private var opera = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,10 +61,24 @@ class MainActivity : AppCompatActivity() {
             btnClick("0")
         }
         btnSuma.setOnClickListener{
-            operacion(suma)
+            operacion()
+            opera = "+"
         }
+        btnResta.setOnClickListener{
+            operacion()
+            opera = "-"
+        }
+        btnMultiplicar.setOnClickListener{
+            operacion()
+            opera = "*"
+        }
+        btnDividir.setOnClickListener{
+            operacion()
+            opera = "/"
+        }
+
         btnIgual.setOnClickListener{
-            resultado(suma,numUno)
+            resultado(opera,numUno)
         }
     }
 
@@ -80,22 +91,9 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun operacion(operacionSeleccionada:String): Double {
+    private fun operacion(): Double {
         numUno = txtPrincipal.text.toString().toDouble()
-        when(operacionSeleccionada){
-            "+"->{
-                txtPrincipal.setText("")
-            }
-            "-"->{
-            }
-            "*"->{
-            }
-            "/"->{
-            }
-            ""->{
-                Toast.makeText(applicationContext,"Seleccionar operación ${numUno}",Toast.LENGTH_LONG).show()
-            }
-        }
+        txtPrincipal.setText("0")
         return numUno
     }
     private fun resultado(op:String,num:Double) {
@@ -103,16 +101,23 @@ class MainActivity : AppCompatActivity() {
 
         when(op){
             "+"->{
-                Toast.makeText(applicationContext,"suma ${num+ numDos}",Toast.LENGTH_LONG).show()
+                resultado = num + numDos
+                txtPrincipal.setText(resultado.toString())
             }
             "-"->{
+                resultado = num - numDos
+                txtPrincipal.setText(resultado.toString())
             }
             "*"->{
+                resultado = num * numDos
+                txtPrincipal.setText(resultado.toString())
             }
             "/"->{
+                resultado = num / numDos
+                txtPrincipal.setText(resultado.toString())
             }
             ""->{
-                Toast.makeText(applicationContext,"Seleccionar operación ${numUno}",Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,"Seleccionar operación }",Toast.LENGTH_LONG).show()
             }
         }
     }
